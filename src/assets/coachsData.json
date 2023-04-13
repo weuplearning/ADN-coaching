@@ -5,7 +5,7 @@
             "firstName": "John",
             "lastName": "Doe",
             "title": "Professor",
-            "category":"1",
+            "category":"category1",
             "department": "Computer Science",
             "email": "johndoe@example.com",
             "courseThemes": [
@@ -19,7 +19,7 @@
             "firstName": "Jane",
             "lastName": "Smith",
             "title": "Associate Professor",
-            "category":"2",
+            "category":"category2",
             "department": "Mathematics",
             "email": "janesmith@example.com",
             "courseThemes": [
@@ -33,7 +33,7 @@
             "firstName": "Bob",
             "lastName": "Johnson",
             "title": "Assistant Professor",
-            "category":"3",
+            "category":"category3",
             "department": "Physics",
             "email": "bobjohnson@example.com",
             "courseThemes": [
