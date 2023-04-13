@@ -1,23 +1,21 @@
 import React from 'react'
-import data from '../../assets/coachsData.json'
 
-interface Professor {
-    id: number;
-    firstName: string;
-    lastName: string;
-    title: string;
-    department: string;
-    email: string;
-    courseThemes: string[];
-  }
-
-const Section1_tile = ({ data }) => {
-
-    return (
-        <div className='section1_tile'>
-
-        </div>
-    )
+interface Section1_tileProps {
+    professor: Professor;
 }
+
+const Section1_tile: React.FC<Section1_tileProps> = ({ professor }) => (
+    <div>
+        <h2>{professor.title} {professor.firstName} {professor.lastName}</h2>
+        <p>Department: {professor.department}</p>
+        <p>Email: {professor.email}</p>
+        <p>Course Themes:</p>
+        <ul>
+            {professor.courseThemes.map(theme => (
+                <li key={theme}>{theme}</li>
+            ))}
+        </ul>
+    </div>
+)
 
 export default Section1_tile

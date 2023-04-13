@@ -1,31 +1,46 @@
 {
     "professors": [
-      {
-        "id": 1,
-        "firstName": "John",
-        "lastName": "Doe",
-        "title": "Professor",
-        "department": "Computer Science",
-        "email": "johndoe@example.com",
-        "courseThemes": ["Algorithms", "Data Structures", "Artificial Intelligence"]
-      },
-      {
-        "id": 2,
-        "firstName": "Jane",
-        "lastName": "Smith",
-        "title": "Associate Professor",
-        "department": "Mathematics",
-        "email": "janesmith@example.com",
-        "courseThemes": ["Calculus", "Linear Algebra", "Statistics"]
-      },
-      {
-        "id": 3,
-        "firstName": "Bob",
-        "lastName": "Johnson",
-        "title": "Assistant Professor",
-        "department": "Physics",
-        "email": "bobjohnson@example.com",
-        "courseThemes": ["Classical Mechanics", "Quantum Mechanics", "Thermodynamics"]
-      }
+        {
+            "id": 1,
+            "firstName": "John",
+            "lastName": "Doe",
+            "title": "Professor",
+            "category":"1",
+            "department": "Computer Science",
+            "email": "johndoe@example.com",
+            "courseThemes": [
+                "Algorithms",
+                "Data Structures",
+                "Artificial Intelligence"
+            ]
+        },
+        {
+            "id": 2,
+            "firstName": "Jane",
+            "lastName": "Smith",
+            "title": "Associate Professor",
+            "category":"2",
+            "department": "Mathematics",
+            "email": "janesmith@example.com",
+            "courseThemes": [
+                "Calculus",
+                "Linear Algebra",
+                "Statistics"
+            ]
+        },
+        {
+            "id": 3,
+            "firstName": "Bob",
+            "lastName": "Johnson",
+            "title": "Assistant Professor",
+            "category":"3",
+            "department": "Physics",
+            "email": "bobjohnson@example.com",
+            "courseThemes": [
+                "Classical Mechanics",
+                "Quantum Mechanics",
+                "Thermodynamics"
+            ]
+        }
     ]
-  }
+}
