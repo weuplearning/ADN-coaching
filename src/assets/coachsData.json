@@ -8,6 +8,7 @@
             "category":"category1",
             "department": "Computer Science",
             "email": "johndoe@example.com",
+            "imagePath": "./images/prof1",
             "courseThemes": [
                 "Algorithms",
                 "Data Structures",
@@ -22,6 +23,7 @@
             "category":"category2",
             "department": "Mathematics",
             "email": "janesmith@example.com",
+            "imagePath": "./images/prof2",
             "courseThemes": [
                 "Calculus",
                 "Linear Algebra",
@@ -36,10 +38,27 @@
             "category":"category3",
             "department": "Physics",
             "email": "bobjohnson@example.com",
+            "imagePath": "./images/prof3",
             "courseThemes": [
                 "Classical Mechanics",
                 "Quantum Mechanics",
                 "Thermodynamics"
+            ]
+        },
+        {
+            "id": 4,
+            "firstName": "test",
+            "lastName": "test",
+            "title": "nia nia",
+            "category":"category3",
+            "department": "Physics",
+            "email": "test@example.com",
+            "imagePath": "./images/prof3",
+            "courseThemes": [
+                "ichi ni",
+                "san",
+                "arigato",
+                "nia"
             ]
         }
     ]

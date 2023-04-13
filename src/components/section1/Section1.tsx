@@ -3,37 +3,30 @@ import Section1_tile from './Section1_tile'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import data from '../../assets/coachsData.json'
+import { Professor } from '../../interfaces/interface';
 
-interface Professor {
-    id: number;
-    firstName: string;
-    lastName: string;
-    title: string;
-    category: string;
-    department: string;
-    email: string;
-    courseThemes: string[];
-}
 
 const Section1 = () => {
 
     const professors: Professor[] = data.professors
 
     const categories = [
-        {categoryName: 'category1', count:0},
-        {categoryName: 'category2', count:0},
-        {categoryName: 'category3', count:0},
+        {category: 'category1', countOfProfessorsInCategory:0, professorsInCategory:[] as Professor[]},
+        {category: 'category2', countOfProfessorsInCategory:0, professorsInCategory:[] as Professor[]},
+        {category: 'category3', countOfProfessorsInCategory:0, professorsInCategory:[] as Professor[]},
     ]
 
     // determining how many professors are there in each categories
     professors.forEach(professor =>{
 
         // here we are itering over all objects in professors variable, and then comparing with categories variable to find out how many professor to have each categores in there properties
-        const category = categories.find(categoryElement => categoryElement.categoryName === professor.category)
+        const category = categories.find(categoryElement => categoryElement.category === professor.category)
         
-        // if there is a categories that match, we add a +1 on the count of this category in categories variable
+        // increasing category count when category is matching with category in professors variable + adding professor that match a categorie to an array categoryProfessor
         if (category) {
-            category.count++
+            // if there is a category that match, we add a +1 on the count of this category in categories variable
+            category.countOfProfessorsInCategory++
+            category.professorsInCategory.push(professor)
         }
     })
 
@@ -42,8 +35,13 @@ const Section1 = () => {
             <h1>Rencontrez l'un de nos coachs</h1>
             <div className="carousel">
                 <Carousel>
-                    {professors.map(professor => (
-                        <Section1_tile key={professor.id} professor={professor} />
+                    {categories.map(category => (
+                        <Section1_tile
+                            key={category.category}
+                            categoryName={category.category}
+                            countOfProfessorsInCategory={category.countOfProfessorsInCategory}
+                            professors={category.professorsInCategory}
+                        />
                     ))}
                 </Carousel>
             </div>
