@@ -60,6 +60,51 @@
                 "arigato",
                 "nia"
             ]
+        },
+        {
+            "id": 3,
+            "firstName": "David",
+            "lastName": "Lee",
+            "title": "Assistant Professor",
+            "category": "category1",
+            "department": "Computer Engineering",
+            "email": "davidlee@example.com",
+            "imagePath": "./images/prof3",
+            "courseThemes": [
+                "Computer Networks",
+                "Operating Systems",
+                "Distributed Systems"
+            ]
+        },
+        {
+            "id": 4,
+            "firstName": "Emily",
+            "lastName": "Wong",
+            "title": "Associate Professor",
+            "category": "category2",
+            "department": "Psychology",
+            "email": "emilywong@example.com",
+            "imagePath": "./images/prof4",
+            "courseThemes": [
+                "Developmental Psychology",
+                "Cognitive Psychology",
+                "Social Psychology"
+            ]
+        },
+        {
+            "id": 5,
+            "firstName": "Michael",
+            "lastName": "Nguyen",
+            "title": "Lecturer",
+            "category": "category1",
+            "department": "Information Systems",
+            "email": "michaelnguyen@example.com",
+            "imagePath": "./images/prof5",
+            "courseThemes": [
+                "Database Systems",
+                "Web Development",
+                "Data Science"
+            ]
         }
     ]
 }
