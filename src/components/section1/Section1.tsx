@@ -10,10 +10,12 @@ const Section1 = () => {
 
     const professors: Professor[] = data.professors
 
+    // defining all the categories
     const categories = [
         {category: 'category1', countOfProfessorsInCategory:0, professorsInCategory:[] as Professor[]},
         {category: 'category2', countOfProfessorsInCategory:0, professorsInCategory:[] as Professor[]},
         {category: 'category3', countOfProfessorsInCategory:0, professorsInCategory:[] as Professor[]},
+        {category: 'category4', countOfProfessorsInCategory:0, professorsInCategory:[] as Professor[]},
     ]
 
     // determining how many professors are there in each categories

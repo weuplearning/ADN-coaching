@@ -105,6 +105,21 @@
                 "Web Development",
                 "Data Science"
             ]
+        },
+        {
+            "id": 6,
+            "firstName": "test1",
+            "lastName": "test1",
+            "title": "test1",
+            "category": "category4",
+            "department": "Information Systems",
+            "email": "michaelnguyen@example.com",
+            "imagePath": "./images/prof6",
+            "courseThemes": [
+                "Database Systems",
+                "Web Development",
+                "Data Science"
+            ]
         }
     ]
 }
