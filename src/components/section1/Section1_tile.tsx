@@ -18,7 +18,7 @@ const Section1_tile: React.FC<Section1_tileProps> = ({ categoryName, countOfProf
                     </li>
                 ))}
             </div>
-            <p>{countOfProfessorsInCategory+'formateurs'}</p>
+            <p>{countOfProfessorsInCategory+' formateurs'}</p>
         </div>
     </div>
 )
