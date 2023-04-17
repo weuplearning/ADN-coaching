@@ -2,13 +2,13 @@ import React from 'react'
 import Section1_tile from './Section1_tile'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import data from '../../assets/coachsData.json'
 import { Professor } from '../../interfaces/interface';
 
+interface Section1Props {
+    professors: Professor[]
+}
 
-const Section1 = () => {
-
-    const professors: Professor[] = data.professors
+const Section1: React.FC<Section1Props> = ({ professors }) => {
 
     // defining all the categories
     const categories = [
