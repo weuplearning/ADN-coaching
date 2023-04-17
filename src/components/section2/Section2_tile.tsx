@@ -8,7 +8,7 @@ interface Section2_tileProps {
 const Section2_tile: React.FC<Section2_tileProps> = ({ professor }) => (
     <div className='section2_tile'>
         <p>{professor.category}</p>
-        <h2>{professor.firstName} {professor.lastName}</h2>
+        <h3>{professor.firstName} {professor.lastName}</h3>
         <p>Department: {professor.department}</p>
         <p>Intitulé du poste : {professor.title}</p>
         <p>Thematiques abordées en coaching :</p>
