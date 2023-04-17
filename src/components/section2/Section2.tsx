@@ -8,10 +8,18 @@ interface Section2Props {
 
 const Section2: React.FC<Section2Props> = ({ professors }) => {
 
-    const [selectedCategory, setselectedCategory] = useState<string | null>(null)
+    const [selectedCategories, setselectedCategories] = useState<string[] > ([])
 
-    const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setselectedCategory(event.target.value)
+    const handleCategoryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        
+        const category = (event.target.value)
+        
+        if (event.target.checked) {
+            setselectedCategories(prevSelectedCategories => [...prevSelectedCategories,category])
+        }
+        else{
+            setselectedCategories(prevSelectedCategories => prevSelectedCategories.filter(element => element !== category))
+        }
     }
     
     return (
@@ -19,20 +27,22 @@ const Section2: React.FC<Section2Props> = ({ professors }) => {
             <div className="section2-top">
                 <h2>Tous nos formateurs</h2>
                 <div className="filter">
-                    <select onChange={handleCategoryChange}>
-                        <option value="">All categories</option>
-                        {/* Add options for each unique course category */}
-                        {[...new Set(professors.flatMap(professor => professor.category))].map(category => (
-                            <option key={category} value={category}>{category}</option>
-                        ))}
-                    </select>
+                    {/* Add checkboxes for each unique course category */}
+                    {[...new Set(professors.map(professor => professor.category))].map(category => (
+                        <label key={category}>
+                            <input type="checkbox" value={category} onChange={handleCategoryChange} />
+                            {category}
+                        </label>
+                    ))}
                 </div>
             </div>
             <div className="divider"></div>
-            {professors.filter(professor =>
-                !selectedCategory || professor.category === selectedCategory).map(professor =>(
-                    <Section2_tile key={professor.id} professor={professor}/>
-            ))}
+            <div className="professorList">
+                {professors.filter(professor =>
+                    selectedCategories.length ===0 || selectedCategories.includes(professor.category)).map(professor =>(
+                        <Section2_tile key={professor.id} professor={professor}/>
+                ))}
+            </div>
         </div>
     )
 }

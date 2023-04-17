@@ -1,0 +1,21 @@
+// main colors
+$color1 : #1E1E1E;
+$color2 : #F99746;
+$color3 : #368093;
+$color4 : #6F7373;
+$white : #FFFFFF;
+
+// main fonts
+@import url('https://fonts.cdnfonts.com/css/amazon-ember');
+
+// redundant rules
+@mixin usualSpaces($marginY, $marginX, $paddingY, $paddingX){
+    margin: $marginY $marginX;
+    padding: $paddingY $paddingX;
+    border-radius: .2rem;
+}
+
+//
+body{
+    font-family: 'Amazon Ember';
+}
