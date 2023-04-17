@@ -1,5 +1,6 @@
 import React from 'react'
 import { Professor } from '../../interfaces/interface';
+import Section2_tile from './Section2_tile'
 
 interface Section2Props {
     professors: Professor[]
@@ -13,7 +14,9 @@ const Section2: React.FC<Section2Props> = ({ professors }) => {
                 <div className="filter"></div>
             </div>
             <div className="divider"></div>
-            {/* {professors.map()} */}
+            {professors.map(professor =>(
+                <Section2_tile key={professor.id} professor={professor}/>
+            ))}
         </div>
     )
 }
