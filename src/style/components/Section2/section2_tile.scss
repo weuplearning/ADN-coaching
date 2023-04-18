@@ -6,7 +6,7 @@
     @include usualSpaces(2rem,3rem,3rem,3rem);
     height: 35rem;
     width: 20rem;
-    transition: .2s;
+    transition: .3s;
     box-shadow: 0rem 0rem 2rem 0rem $color5;
 
 }
@@ -68,6 +68,7 @@
 .section2_tile-jobTitle{
     color: $color2;
     margin-top: 0;
+    font-weight: 500;
 }
 
 .section2_tile-themes{
