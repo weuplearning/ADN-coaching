@@ -1,5 +1,37 @@
 .section2_tile{
     background: $white;
-    border: .2rem solid $color4;
-    @include usualSpaces(1rem,1rem,1rem,1rem);
+    border: .15rem solid $color4;
+    @include usualSpaces(2rem,3rem,3rem,3rem);
+    height: 30rem;
+    width: 20rem;
+    transition: .3s;
+    box-shadow: 0rem 0rem 2rem 0rem $color5;
+    display: flex;
+    flex-direction: column;
+}
+.section2_tile:hover{
+    transform: scale(0.98);
+    box-shadow: 0rem 0rem 1rem 0rem $color5;
+}
+
+.section2_Tile-category{
+    background: $color4;
+    @include usualSpaces(-3rem,-3rem,.6rem,3rem);
+    border-radius: .6rem 0rem 1rem 0rem;
+    position: absolute;
+    transform: translate(-.1rem,-.1rem);
+}
+
+.section2_Tile-jobTitle{
+    color: $color2;
+}
+
+.section2_Tile-themes{
+    color: $color3;
+}
+
+.section2_tile-button{
+    background: $color3;
+    @include usualSpaces(.5rem,.5rem,.6rem,3rem);
+    align-self: center;
 }

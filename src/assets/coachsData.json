@@ -8,7 +8,7 @@
             "category":"category1",
             "department": "Computer Science",
             "email": "johndoe@example.com",
-            "imagePath": "./images/prof1",
+            "imagePath": "src/assets/images/prof1.svg",
             "courseThemes": [
                 "Algorithms",
                 "Data Structures",
@@ -23,7 +23,7 @@
             "category":"category2",
             "department": "Mathematics",
             "email": "janesmith@example.com",
-            "imagePath": "./images/prof2",
+            "imagePath": "src/assets/images/prof2.svg",
             "courseThemes": [
                 "Calculus",
                 "Linear Algebra",
@@ -38,7 +38,7 @@
             "category":"category3",
             "department": "Physics",
             "email": "bobjohnson@example.com",
-            "imagePath": "./images/prof3",
+            "imagePath": "src/assets/images/prof3.svg",
             "courseThemes": [
                 "Classical Mechanics",
                 "Quantum Mechanics",
@@ -53,7 +53,7 @@
             "category":"category3",
             "department": "Physics",
             "email": "test@example.com",
-            "imagePath": "./images/prof3",
+            "imagePath": "src/assets/images/prof4.svg",
             "courseThemes": [
                 "ichi ni",
                 "san",
@@ -69,7 +69,7 @@
             "category": "category1",
             "department": "Computer Engineering",
             "email": "davidlee@example.com",
-            "imagePath": "./images/prof3",
+            "imagePath": "src/assets/images/prof5.svg",
             "courseThemes": [
                 "Computer Networks",
                 "Operating Systems",
@@ -84,7 +84,7 @@
             "category": "category2",
             "department": "Psychology",
             "email": "emilywong@example.com",
-            "imagePath": "./images/prof4",
+            "imagePath": "src/assets/images/prof6.svg",
             "courseThemes": [
                 "Developmental Psychology",
                 "Cognitive Psychology",
@@ -99,7 +99,7 @@
             "category": "category1",
             "department": "Information Systems",
             "email": "michaelnguyen@example.com",
-            "imagePath": "./images/prof5",
+            "imagePath": "src/assets/images/prof7.svg",
             "courseThemes": [
                 "Database Systems",
                 "Web Development",
@@ -114,7 +114,7 @@
             "category": "category4",
             "department": "Information Systems",
             "email": "michaelnguyen@example.com",
-            "imagePath": "./images/prof6",
+            "imagePath": "src/assets/images/prof8.svg",
             "courseThemes": [
                 "Database Systems",
                 "Web Development",

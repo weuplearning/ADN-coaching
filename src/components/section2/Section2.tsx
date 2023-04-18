@@ -26,7 +26,8 @@ const Section2: React.FC<Section2Props> = ({ professors }) => {
         <div className='section2'>
             <div className="section2-top">
                 <h2>Tous nos formateurs</h2>
-                <div className="filter">
+                <div className="section2-filter">
+                    <p>filtres</p>
                     {/* Add checkboxes for each unique course category */}
                     {[...new Set(professors.map(professor => professor.category))].map(category => (
                         <label key={category}>
@@ -36,7 +37,7 @@ const Section2: React.FC<Section2Props> = ({ professors }) => {
                     ))}
                 </div>
             </div>
-            <div className="divider"></div>
+            <div className="divider section2-divider"></div>
             <div className="professorList">
                 {professors.filter(professor =>
                     selectedCategories.length ===0 || selectedCategories.includes(professor.category)).map(professor =>(

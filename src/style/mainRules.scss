@@ -1,9 +1,10 @@
 // -------- main colors
-$color1 : #1E1E1E;
+$color1 : #1E2631;
 $color2 : #F99746;
 $color3 : #368093;
-$color4 : #6F7373;
+$color4 : #C9CCCC;
 $white : #FFFFFF;
+$color5 : #dadada;
 
 // -------- main fonts
 @import url('https://fonts.cdnfonts.com/css/amazon-ember');
@@ -12,19 +13,26 @@ $white : #FFFFFF;
 @mixin usualSpaces($marginY, $marginX, $paddingY, $paddingX){
     margin: $marginY $marginX;
     padding: $paddingY $paddingX;
-    border-radius: .8rem;
+    border-radius: .6rem;
 }
 
 // -------- main rules
 body{
     font-family: 'Amazon Ember';
     margin: 0;
-    @include usualSpaces(1rem,1rem ,1rem ,1rem)
+    background: $color1;
+    font-size: 1.2rem;
+}
+a{
+    text-decoration: none;
+    color: $white;
 }
 
 .divider{
-    height: .2rem;
-    background: $color1;
-    width: 30%;
+    height: .15rem;
+    background: $color4;
+    width: 100%;
     align-self: center;
+    @include usualSpaces(1rem,0rem,0rem,0rem);
+    border-radius: .5rem;
 }
