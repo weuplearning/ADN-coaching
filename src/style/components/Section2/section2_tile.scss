@@ -1,0 +1,5 @@
+.section2_tile{
+    background: $white;
+    border: .2rem solid $color4;
+    @include usualSpaces(1rem,1rem,1rem,1rem);
+}

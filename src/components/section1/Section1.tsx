@@ -34,7 +34,6 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
 
     return (
         <div className='section1'>
-            <h1>Rencontrez l'un de nos coachs</h1>
             <div className="carousel">
                 <Carousel>
                     {categories.map(category => (

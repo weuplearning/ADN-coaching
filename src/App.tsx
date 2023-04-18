@@ -11,6 +11,7 @@ function App() {
 
     return (
         <div className="app">
+            <h1>Rencontrez l'un de nos coachs</h1>
             <Section1 professors={professors}/>
             <Section2 professors={professors}/>
         </div>

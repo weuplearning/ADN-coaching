@@ -1,0 +1,15 @@
+.section2{
+    display: flex;
+    flex-direction: column;
+}
+
+.section2-top{
+    display: flex;
+    align-items: center;
+}
+
+.professorList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
