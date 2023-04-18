@@ -1,20 +1,63 @@
 .section2_tile{
+    display: flex;
+    // flex-direction: column;
     background: $white;
     border: .15rem solid $color4;
     @include usualSpaces(2rem,3rem,3rem,3rem);
-    height: 30rem;
+    height: 35rem;
     width: 20rem;
-    transition: .3s;
+    transition: .2s;
     box-shadow: 0rem 0rem 2rem 0rem $color5;
-    display: flex;
-    flex-direction: column;
+
 }
 .section2_tile:hover{
-    transform: scale(0.98);
+    transform: scale(0.99);
     box-shadow: 0rem 0rem 1rem 0rem $color5;
 }
 
-.section2_Tile-category{
+.section2_tile-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.section2_tile-topSection{
+    position: relative;
+}
+
+.section2_tile-middleSection{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 3rem;
+    position: relative;
+}
+.section2_tile-middleSection-text{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.section2_tile-img{
+    width: 6.5rem;
+    position: absolute;
+    top: -3rem;
+}
+.section2_tile-moreInfos{
+    // border: .1rem solid $color1;
+    position: absolute;
+    padding: .2rem;
+    border-radius: 2rem;
+    font-size: .7rem;
+    top: 3rem;
+    right: 7rem;
+}
+.section2_tile-moreInfos{
+    content: url('/src/assets/icons/info_empty.svg');
+}
+.section2_tile-moreInfos{
+    content: url('/src/assets/icons/info_empty.svg');
+}
+
+.section2_tile-category{
     background: $color4;
     @include usualSpaces(-3rem,-3rem,.6rem,3rem);
     border-radius: .6rem 0rem 1rem 0rem;
@@ -22,16 +65,31 @@
     transform: translate(-.1rem,-.1rem);
 }
 
-.section2_Tile-jobTitle{
+.section2_tile-jobTitle{
     color: $color2;
+    margin-top: 0;
 }
 
-.section2_Tile-themes{
+.section2_tile-themes{
     color: $color3;
+}
+
+.spacer{
+    flex-grow: 1;
 }
 
 .section2_tile-button{
     background: $color3;
     @include usualSpaces(.5rem,.5rem,.6rem,3rem);
+    align-self: flex-end;
     align-self: center;
+    transition: .3s;
+    border: .2rem solid darken($color3, 10%);
+}
+.section2_tile-button:hover{
+    background: darken($color3, 15%);
+    border: .2rem solid darken($color3, 20%);
+}
+.section2_tile-button:active{
+    transform: scale(.98);
 }
