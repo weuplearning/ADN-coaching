@@ -8,17 +8,17 @@ interface Section1_tileProps{
 }
 
 const Section1_tile: React.FC<Section1_tileProps> = ({ categoryName, countOfProfessorsInCategory, professors }) => (
-    <div>
-        <h2>{categoryName}</h2>
-        <div>
-            <div>
+    <div className='section1_tile'>
+        <h2 className='section1_tile-categoryText'>{categoryName}</h2>
+        <div className='section1_tile-bottomSection'>
+            <div className='section1_tile-professorPhotos'>
                 {professors.map(professor => (
                     <li key={professor.id}>
                         <img src={professor.imagePath} alt={professor.firstName+' '+professor.lastName} />
                     </li>
                 ))}
             </div>
-            <p>{countOfProfessorsInCategory+' formateurs'}</p>
+            <p className='section1_tile-professorsAmountText'>{countOfProfessorsInCategory+' formateurs'}</p>
         </div>
     </div>
 )
