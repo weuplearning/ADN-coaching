@@ -55,7 +55,7 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
             items: 1,
             slidesToSlide: 1
         }
-      }
+    }
 
     return (
         <div className='section1'>
