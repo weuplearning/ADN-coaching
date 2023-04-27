@@ -3,10 +3,10 @@ import Section1_tile from './Section1_tile'
 
 // import { Carousel } from 'react-responsive-carousel';
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Carousel  from 'react-multi-carousel';
-import "react-multi-carousel/lib/styles.css";
+import Carousel from 'react-multi-carousel'
+import "react-multi-carousel/lib/styles.css"
 
-import { Professor } from '../../interfaces/interface';
+import { Professor } from '../../interfaces/interface'
 
 interface Section1Props {
     professors: Professor[]
@@ -36,7 +36,8 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
         }
     })
 
-    const responsive = {
+    // properties for react-multi-carousel
+    const responsiveCarousel = {
         superLargeDesktop: {
           breakpoint: { max: 4000, min: 3000 },
           items: 5
@@ -44,12 +45,10 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
           items: 3,
-          slidesToSlide: 3
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
           items: 2,
-          slidesToSlide: 3
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
@@ -61,7 +60,7 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
     return (
         <div className='section1'>
             <div className="carousel">
-                <Carousel responsive={responsive}>
+                <Carousel responsive={responsiveCarousel} containerClass='test'>
                     {categories.map(category => (
                         <Section1_tile
                             key={category.category}
