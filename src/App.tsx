@@ -11,7 +11,9 @@ function App() {
 
     return (
         <div className="app">
-            <h1 className='pageTitle'>Rencontrez l'un de nos coachs</h1>
+            <div className="pageTitleSection">
+                <h1 className='pageTitle'>Rencontrez l'un de nos coachs</h1>
+            </div>
             <Section1 professors={professors}/>
             <Section2 professors={professors}/>
         </div>
