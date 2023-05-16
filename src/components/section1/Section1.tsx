@@ -3,8 +3,13 @@ import Section1_tile from './Section1_tile'
 
 // import { Carousel } from 'react-responsive-carousel';
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Carousel from 'react-multi-carousel'
-import "react-multi-carousel/lib/styles.css"
+// import Carousel from 'react-multi-carousel'
+// import "react-multi-carousel/lib/styles.css"
+// import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+// import 'pure-react-carousel/dist/react-carousel.es.css';
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 import { Professor } from '../../interfaces/interface'
 
@@ -36,31 +41,33 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
         }
     })
 
-    // properties for react-multi-carousel
-    const responsiveCarousel = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2,
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-            slidesToSlide: 1
-        }
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1
     }
 
     return (
         <div className='section1'>
             <div className="carousel">
-                <Carousel responsive={responsiveCarousel} containerClass='test'>
+                {/* <CarouselProvider naturalSlideWidth={33} naturalSlideHeight={100} totalSlides={categories.length}>
+                    <Slider visibleSlides={0}>
+                        {categories.map((category,index) => (
+                            <Slide index={index} key={category.category}>
+                                <Section1_tile
+                                    categoryName={category.category}
+                                    countOfProfessorsInCategory={category.countOfProfessorsInCategory}
+                                    professors={category.professorsInCategory}
+                                />
+                            </Slide>
+                        ))}
+                    </Slider>
+                    <ButtonBack>Back</ButtonBack>
+                    <ButtonNext>Next</ButtonNext>
+                </CarouselProvider> */}
+                <Slider {...sliderSettings}>
                     {categories.map(category => (
                         <Section1_tile
                             key={category.category}
@@ -69,7 +76,7 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
                             professors={category.professorsInCategory}
                         />
                     ))}
-                </Carousel>
+                </Slider>
             </div>
         </div>
     )
