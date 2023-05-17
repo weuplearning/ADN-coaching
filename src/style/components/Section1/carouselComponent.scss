@@ -1,0 +1,23 @@
+.carouselComponent {
+    display: flex;
+    flex-direction: column;
+}
+
+.carouselComponent-carousel {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.carouselComponent-buttons {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.carouselComponent-buttons > button {
+    width: 1rem;
+    height: 1rem;
+    @include usualSpaces(1rem,1rem,.7rem,.7rem);
+    border: .5rem solid $color3;
+}

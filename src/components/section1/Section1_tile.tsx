@@ -5,6 +5,7 @@ interface Section1_tileProps{
     categoryName: string;
     countOfProfessorsInCategory: number;
     professors: Professor[]
+    style?: React.CSSProperties;
 }
 
 const Section1_tile: React.FC<Section1_tileProps> = ({ categoryName, countOfProfessorsInCategory, professors }) => (
