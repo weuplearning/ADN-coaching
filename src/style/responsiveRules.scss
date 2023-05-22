@@ -1,0 +1,29 @@
+@media screen and (max-width:1850px) {
+    .section2{
+        padding: 2rem 4rem;
+    }
+    .section2_tile{
+        margin: 2rem 1.5rem;
+    }
+}
+@media screen and (max-width:1700px) {
+    .section2{
+        padding: 2rem 3rem;
+    }
+    .section2_tile{
+        margin: 2rem 1rem;
+    }
+}
+@media screen and (max-width:1550px) {
+    .section2{
+        padding: 2rem 2rem;
+    }
+    .section2_tile{
+        margin: 2rem 1rem;
+    }
+}
+@media screen and (max-width:950px) {
+    .section2-top{
+        flex-direction: column;
+    }
+}

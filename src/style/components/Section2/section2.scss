@@ -10,13 +10,14 @@
 .section2-top{
     display: flex;
     align-items: center;
-    @include usualSpaces(1rem,0rem,0rem,0rem);
+    @include usualSpaces(1rem,0rem,0rem,2rem);
     justify-content: space-between;
     margin-bottom: 0rem;
 }
 
 .section2-divider{
     margin-top: 0rem;
+    width: 96%;
 }
 
 .section2-filter{

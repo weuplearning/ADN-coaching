@@ -17,6 +17,9 @@ $color5 : #dadada;
 }
 
 // -------- main rules
+*{
+    transition: .15s;
+}
 body{
     font-family: 'Amazon Ember';
     margin: 0;

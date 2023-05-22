@@ -1,9 +1,15 @@
 .section1_tile{
     background: $color4;
-    @include usualSpaces(4rem,2rem,0rem,0rem);
+    // @include usualSpaces(4rem,2rem,0rem,0rem);
     padding-top: 1rem;
     // height: 20rem;
-    width: 30rem;
+    // width: 30rem;
+    border-radius: .6rem;
+    max-width: 40rem;
+    transition: .2s;
+}
+.section1_tile:hover{
+    transform: scale(0.98);
 }
 .section1_tile-categoryText{
     margin-bottom: 8rem;

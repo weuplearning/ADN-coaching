@@ -11,8 +11,11 @@ import Section1_tile from './Section1_tile'
 // import "slick-carousel/slick/slick.css"
 // import "slick-carousel/slick/slick-theme.css"
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination, Scrollbar } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 import { Professor } from '../../interfaces/interface'
 
@@ -47,21 +50,14 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
     return (
         <div className='section1'>
             <div className="carousel">
-                {/* <Slider {...sliderSettings}>
-                    {categories.map(category => (
-                        <Section1_tile
-                            key={category.category}
-                            categoryName={category.category}
-                            countOfProfessorsInCategory={category.countOfProfessorsInCategory}
-                            professors={category.professorsInCategory}
-                        />
-                    ))}
-                </Slider> */}
                 <Swiper
-                    spaceBetween={50}
+                    modules={[Navigation, Pagination, Scrollbar]}
+                    spaceBetween={65}
                     slidesPerView={3}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    navigation
+                    pagination={{ clickable: true }}
+                    // onSlideChange={() => console.log('slide change')}
+                    // onSwiper={(swiper) => console.log(swiper)}
                 >
                     {categories.map(category => (
                         <SwiperSlide>
