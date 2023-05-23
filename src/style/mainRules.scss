@@ -5,6 +5,7 @@ $color3 : #368093;
 $color4 : #C9CCCC;
 $white : #FFFFFF;
 $color5 : #dadada;
+$color6: #262626;
 
 // -------- main fonts
 @import url('https://fonts.cdnfonts.com/css/amazon-ember');
@@ -26,6 +27,7 @@ body{
     background: $color1;
     font-size: 1.2rem;
     transition: .1s;
+    color: $color6;
 }
 a{
     text-decoration: none;

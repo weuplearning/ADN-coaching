@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background: whitesmoke;
-    @include usualSpaces(1rem,1rem,2rem,8rem);
+    @include usualSpaces(1rem,1.5rem,2rem,8rem);
     margin-bottom: 0rem;
     border-radius: .6rem .6rem 0rem 0rem;
 }
@@ -13,6 +13,7 @@
     @include usualSpaces(1rem,0rem,0rem,2rem);
     justify-content: space-between;
     margin-bottom: 0rem;
+    color: $color6;
 }
 
 .section2-divider{
@@ -23,6 +24,56 @@
 .section2-filter{
     display: flex;
     align-items: center;
+    margin: 1rem 0;
+    // @include usualSpaces(1rem, 0, 0, 0);
+    place-self: flex-end;
+    // cursor: pointer;
+    // background: $color4;
+    flex-direction: row-reverse;
+    transition: .15s;
+}
+.section2-filterItems > label{
+    margin: 0 .5rem;
+    // display: none;
+}
+
+.section2-filterButton{
+    border: .2rem solid $color6;
+    padding: .5rem .7rem;
+    border-radius: .6rem;
+    cursor: pointer;
+    background: $color4;
+    transition: .15s;
+    display: flex;
+}
+.section2-filterButton:hover{
+    filter: brightness(.9);
+}
+.section2-filterButton:active{
+    filter: brightness(.9);
+    transform: scale(.9);
+}
+.section2-filterButton::before{
+    content: url('src/assets/icons/edit_filter.svg');
+    margin-right: 1rem;
+    height: 1rem;
+    transform: translateY(.1rem);
+}
+
+.section2-filterItems{
+    display: flex;
+    padding: .5rem 1rem;
+    margin-right: 1rem;
+    border-radius: .6rem;
+    // filter: blur(1rem) opacity(0);
+    // transition: .1s;
+    // opacity: 0;
+    // transition: opacity .3s ease-in-out;
+}
+.section2-filterItems-open{
+    // filter: blur(0rem) opacity(1);
+    // opacity: 1;
+    background: $color4;
 }
 
 .professorList{
