@@ -1,33 +1,62 @@
 .section1_tile{
     background: $color4;
     // @include usualSpaces(4rem,2rem,0rem,0rem);
-    padding-top: 1rem;
+    // padding-top: 1rem;
     // height: 20rem;
     // width: 30rem;
     border-radius: .6rem;
     max-width: 40rem;
     transition: .2s;
+    border: .2rem solid darken($color3, 5%);
+    border-radius: .9rem;
 }
 .section1_tile:hover{
     transform: scale(0.985);
 }
-.section1_tile-categoryText{
-    margin-bottom: 8rem;
+
+.section1_tile-topSection{
+    padding: 2rem;
+    min-height: 11rem;
+    border-radius: 0.7rem 0.7rem 0rem 0rem;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+.section1_tile-topSection > h2{
+    margin: 0;
+}
+
+.section1_tile-categoryText{
+    // margin-left: 2rem;
+    display: none;
+}
+
 .section1_tile-bottomSection{
     background: $color3;
-    padding: 1rem;
+    padding: 0rem 1rem;
     border-radius: 0rem 0rem .6rem .6rem;
     display: flex;
     align-items: center;
+    min-height: 6.5rem;
 }
+
 .section1_tile-professorPhotos{
     display: flex;
 }
+
 .section1_tile-professorPhotos > li > img{
     width: 4rem !important;
     margin-right: -4rem;
+    transition: transform 0.2s ease-in-out;
+    transition-duration: .2s;
+    transition-delay: .05s;
+    // box-shadow: 0 0 1rem 1rem grey;
+    // border: .2rem solid $color4;
 }
+
+// .section1_tile-professorPhotos > li > img:hover{
+//     transform: scale(1.5);
+//     // transition-duration: 0.2s;
+// }
 .section1_tile-professorsAmountText{
     margin: 0rem 1rem;
     margin-left: 5rem;

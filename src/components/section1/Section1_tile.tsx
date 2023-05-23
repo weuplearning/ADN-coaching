@@ -2,14 +2,17 @@ import React from 'react'
 import { Professor } from '../../interfaces/interface';
 
 interface Section1_tileProps{
-    categoryName: string;
-    countOfProfessorsInCategory: number;
+    categoryName: string
+    countOfProfessorsInCategory: number
     professors: Professor[]
+    categoryImage:string
 }
 
-const Section1_tile: React.FC<Section1_tileProps> = ({ categoryName, countOfProfessorsInCategory, professors }) => (
+const Section1_tile: React.FC<Section1_tileProps> = ({ categoryName, countOfProfessorsInCategory, professors, categoryImage }) => (
     <div className='section1_tile'>
-        <h2 className='section1_tile-categoryText'>{categoryName}</h2>
+        <div className="section1_tile-topSection" style={{backgroundImage: `url(${categoryImage})`}}>
+            <h2 className='section1_tile-categoryText'>{categoryName}</h2>
+        </div>
         <div className='section1_tile-bottomSection'>
             <div className='section1_tile-professorPhotos'>
                 {professors.map(professor => (
@@ -18,7 +21,12 @@ const Section1_tile: React.FC<Section1_tileProps> = ({ categoryName, countOfProf
                     </li>
                 ))}
             </div>
-            <p className='section1_tile-professorsAmountText'>{countOfProfessorsInCategory+' formateurs'}</p>
+            <p className='section1_tile-professorsAmountText'>
+                {countOfProfessorsInCategory <= 1
+                    ? countOfProfessorsInCategory + ' formateur'
+                    : countOfProfessorsInCategory + ' formateurs'
+                }
+            </p>
         </div>
     </div>
 )

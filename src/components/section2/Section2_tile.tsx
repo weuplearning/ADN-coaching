@@ -26,7 +26,7 @@ const Section2_tile: React.FC<Section2_tileProps> = ({ professor }) => (
                 ))}
             </ul>
             <div className="spacer"></div>
-            <a className='section2_tile-button' href="">reserver un coaching</a>
+            <a className='section2_tile-button' target='_blank' href={professor.reservationLink}>reserver un coaching</a>
         </div>
     </div>
 )

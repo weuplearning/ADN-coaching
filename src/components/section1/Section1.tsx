@@ -1,16 +1,6 @@
 import React from 'react'
 import Section1_tile from './Section1_tile'
 
-// import { Carousel } from 'react-responsive-carousel';
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import Carousel from 'react-multi-carousel'
-// import "react-multi-carousel/lib/styles.css"
-// import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-// import 'pure-react-carousel/dist/react-carousel.es.css';
-// import Slider from "react-slick"
-// import "slick-carousel/slick/slick.css"
-// import "slick-carousel/slick/slick-theme.css"
-
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar } from 'swiper'
 import 'swiper/css'
@@ -25,12 +15,15 @@ interface Section1Props {
 
 const Section1: React.FC<Section1Props> = ({ professors }) => {
 
-    // defining all the categories
+    // defining all the categories/themes that will be used to name the tiles in the carousel and such
     const categories = [
-        { category: 'category1', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[] },
-        { category: 'category2', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[] },
-        { category: 'category3', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[] },
-        { category: 'category4', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[] },
+        { category: 'Stratégie', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category1.png" },
+        { category: 'Marketing', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category5.png" },
+        { category: "Gestion d'entreprise", countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category4.png" },
+        { category: 'Gestion des opérations', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category3.png" },
+        { category: 'Ventes', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category7.png" },
+        { category: 'Tech', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category2.png" },
+        { category: 'Marketplace', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category6.png" },
     ]
 
     // determining how many professors are there in each categories
@@ -52,12 +45,23 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
             <div className="carousel">
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar]}
-                    spaceBetween={65}
+                    spaceBetween={100}
                     slidesPerView={3}
                     navigation
                     pagination={{ clickable: true }}
-                    // onSlideChange={() => console.log('slide change')}
-                    // onSwiper={(swiper) => console.log(swiper)}
+                    breakpoints={{
+                        1100: {
+                          slidesPerView: 3,
+                          spaceBetween: 80,
+                        },
+                        750: {
+                          slidesPerView: 2,
+                          spaceBetween: 70,
+                        },
+                        1: {
+                          slidesPerView: 1,
+                        },
+                    }}
                 >
                     {categories.map(category => (
                         <SwiperSlide>
@@ -66,6 +70,7 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
                                 categoryName={category.category}
                                 countOfProfessorsInCategory={category.countOfProfessorsInCategory}
                                 professors={category.professorsInCategory}
+                                categoryImage={category.categoryImage}
                             />
                         </SwiperSlide>
                     ))}

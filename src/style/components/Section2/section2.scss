@@ -31,6 +31,7 @@
     // background: $color4;
     flex-direction: row-reverse;
     transition: .15s;
+    font-size: 1rem;
 }
 .section2-filterItems > label{
     margin: 0 .5rem;
@@ -38,7 +39,7 @@
 }
 
 .section2-filterButton{
-    border: .2rem solid $color6;
+    border: .2rem solid darken($color4, 25%);
     padding: .5rem .7rem;
     border-radius: .6rem;
     cursor: pointer;
@@ -51,17 +52,17 @@
 }
 .section2-filterButton:active{
     filter: brightness(.9);
-    transform: scale(.9);
+    transform: scale(.95);
 }
 .section2-filterButton::before{
     content: url('src/assets/icons/edit_filter.svg');
     margin-right: 1rem;
     height: 1rem;
-    transform: translateY(.1rem);
+    transform: translateY(.1rem) scale(0.9);
 }
 
 .section2-filterItems{
-    display: flex;
+    display: none;
     padding: .5rem 1rem;
     margin-right: 1rem;
     border-radius: .6rem;
@@ -71,6 +72,7 @@
     // transition: opacity .3s ease-in-out;
 }
 .section2-filterItems-open{
+    display: flex;
     // filter: blur(0rem) opacity(1);
     // opacity: 1;
     background: $color4;

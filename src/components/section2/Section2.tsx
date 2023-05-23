@@ -8,9 +8,13 @@ interface Section2Props {
 
 const Section2: React.FC<Section2Props> = ({ professors }) => {
 
+    // variable containing state of selected categories in the filter menu
     const [selectedCategories, setselectedCategories] = useState<string[]>([])
+    
+    // variable containing state of filter menu, if it's opened or not
     const [menuOpen, setMenuOpen] = useState(false)
 
+    // function to filter categories/themes
     const handleCategoryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 
         const category = (event.target.value)
@@ -23,6 +27,7 @@ const Section2: React.FC<Section2Props> = ({ professors }) => {
         }
     }
 
+    // function to hide/show the filters in the filter menu
     const handleButtonClick = () => {
         setMenuOpen(!menuOpen)
     }
@@ -35,7 +40,7 @@ const Section2: React.FC<Section2Props> = ({ professors }) => {
                     <div onClick={handleButtonClick} className='section2-filterButton'>filtres</div>
                     <div className={`section2-filterItems ${menuOpen ? 'section2-filterItems-open' : ''}`}>
                         {menuOpen &&
-                            // Add checkboxes for each unique course category
+                            // Add checkboxes for each course category found in json
                             [...new Set(professors.map(professor => professor.category))].map(category => (
                                 <label key={category}>
                                     <input type="checkbox" value={category} onChange={handleCategoryChange} />
