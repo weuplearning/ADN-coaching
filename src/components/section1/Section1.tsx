@@ -19,7 +19,7 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
     // const categoryImagePath = 'https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets'
     const categoryImagePath = 'https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets'
 
-    // defining all the categories/themes that will be used to name the tiles in the carousel and such
+    // object that define all the categories/themes that will be used to name the tiles in the carousel and such
     const categories = [
         { category: 'Stratégie', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: `${categoryImagePath}/images/category1.png` },
         { category: 'Marketing', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: `${categoryImagePath}/images/category5.png` },
