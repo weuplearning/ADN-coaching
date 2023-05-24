@@ -12,7 +12,10 @@ const App = () => {
     const [professors, setProfessors] = useState<Professor[]>([])
 
     useEffect(() => {
-        fetch('https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets/coachsData.json')
+        // dev version below, to avoid CORS issue. Note that you have to go to the website url in order for it to works ;)
+        // fetch('https://cors-anywhere.herokuapp.com/https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets/coachsData.json')
+        // fetch('https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets/coachsData.json')
+        fetch('/media/microsites/amazon/react_coach/assets/coachsData.json')
             .then(response => response.json())
             .then(datas => setProfessors(datas.professors))
     }, [])

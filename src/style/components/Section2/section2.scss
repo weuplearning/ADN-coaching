@@ -55,7 +55,7 @@
     transform: scale(.95);
 }
 .section2-filterButton::before{
-    content: url('src/assets/icons/edit_filter.svg');
+    content: url('#{$assetsPath}icons/edit_filter.svg');
     margin-right: 1rem;
     height: 1rem;
     transform: translateY(.1rem) scale(0.9);

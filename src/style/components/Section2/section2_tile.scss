@@ -51,10 +51,10 @@
     right: 7rem;
 }
 .section2_tile-moreInfos{
-    content: url('/src/assets/icons/info_empty.svg');
+    content: url('#{$assetsPath}icons/info_empty.svg');
 }
 .section2_tile-moreInfos{
-    content: url('/src/assets/icons/info_empty.svg');
+    content: url('#{$assetsPath}icons/info_empty.svg');
 }
 
 .section2_tile-category{

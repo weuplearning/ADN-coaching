@@ -12,13 +12,13 @@
 }
 .swiper-button-next{
     // background-image: url('https://example.com/next-arrow.png');
-    content: url("src/assets/icons/carouselArrow_next.svg");
+    content: url("#{$assetsPath}icons/carouselArrow_next.svg");
     transition: .2s;
     transform: translateX(-.5rem);
 }
 .swiper-button-prev{
     // background-image: url('https://example.com/prev-arrow.png');
-    content: url("src/assets/icons/carouselArrow_prev.svg");
+    content: url("#{$assetsPath}icons/carouselArrow_prev.svg");
     transition: .2s;
     transform: translateX(.5rem);
 }

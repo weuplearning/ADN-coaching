@@ -15,15 +15,19 @@ interface Section1Props {
 
 const Section1: React.FC<Section1Props> = ({ professors }) => {
 
+    // defining the path for images
+    // const categoryImagePath = 'https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets'
+    const categoryImagePath = 'media/microsites/amazon/react_coach/assets'
+
     // defining all the categories/themes that will be used to name the tiles in the carousel and such
     const categories = [
-        { category: 'Stratégie', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category1.png" },
-        { category: 'Marketing', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category5.png" },
-        { category: "Gestion d'entreprise", countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category4.png" },
-        { category: 'Gestion des opérations', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category3.png" },
-        { category: 'Ventes', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category7.png" },
-        { category: 'Tech', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category2.png" },
-        { category: 'Marketplace', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: "src/assets/images/category6.png" },
+        { category: 'Stratégie', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: `${categoryImagePath}/images/category1.png` },
+        { category: 'Marketing', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: `${categoryImagePath}/images/category5.png` },
+        { category: "Gestion d'entreprise", countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: `${categoryImagePath}/images/category4.png` },
+        { category: 'Gestion des opérations', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: `${categoryImagePath}/images/category3.png` },
+        { category: 'Ventes', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: `${categoryImagePath}/images/category7.png` },
+        { category: 'Tech', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: `${categoryImagePath}/images/category2.png` },
+        { category: 'Marketplace', countOfProfessorsInCategory: 0, professorsInCategory: [] as Professor[], categoryImage: `${categoryImagePath}/images/category6.png` },
     ]
 
     // determining how many professors are there in each categories
