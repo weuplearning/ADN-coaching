@@ -12,6 +12,8 @@ To build the project
 vite build
 ```
 
+---
+
 **To change the paths of assets if needed :**
 
 - path json file containing all the data of coachs/professors
