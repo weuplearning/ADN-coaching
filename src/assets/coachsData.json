@@ -121,6 +121,38 @@
                 "Data Science"
             ],
             "reservationLink":"https://www.google.fr/"
+        },
+        {
+            "id": 9,
+            "firstName": "test1",
+            "lastName": "test1",
+            "title": "test1",
+            "category": "Tech",
+            "department": "Information Systems",
+            "email": "michaelnguyen@example.com",
+            "imagePath": "src/assets/images/prof8.svg",
+            "courseThemes": [
+                "Database Systems",
+                "Web Development",
+                "Data Science"
+            ],
+            "reservationLink":"https://www.google.fr/"
+        },
+        {
+            "id": 10,
+            "firstName": "test1",
+            "lastName": "test1",
+            "title": "test1",
+            "category": "Tech",
+            "department": "Information Systems",
+            "email": "michaelnguyen@example.com",
+            "imagePath": "src/assets/images/prof2.svg",
+            "courseThemes": [
+                "Database Systems",
+                "Web Development",
+                "Data Science"
+            ],
+            "reservationLink":"https://www.google.fr/"
         }
     ]
 }

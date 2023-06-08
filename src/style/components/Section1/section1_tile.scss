@@ -16,10 +16,11 @@
 
 .section1_tile-topSection{
     padding: 2rem;
-    min-height: 11rem;
+    min-height: 14rem;
     border-radius: 0.7rem 0.7rem 0rem 0rem;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .section1_tile-topSection > h2{
     margin: 0;
@@ -41,6 +42,10 @@
 
 .section1_tile-professorPhotos{
     display: flex;
+}
+
+.section1_tile-professorPhotos > li > img{
+    border-radius: 5rem;
 }
 
 .section1_tile-professorPhotos > li > img{

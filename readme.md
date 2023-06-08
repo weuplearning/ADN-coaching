@@ -27,12 +27,12 @@ To change the paths of assets if needed :
     
 - path photos of coachs/professors
     
-    ```sh
+    ```
     it’s in the json file, in the property “imagePath”
     ```
     
 - path icons and all for website, such as carousel arrows..
     
-    ```sh
-    src/style/mainRules.scss
+    ```
+    src/style/mainRules.scss - change the value of the $assetsPath variable
     ```
