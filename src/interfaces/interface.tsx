@@ -8,6 +8,6 @@ export interface Professor {
     email: string;
     imagePath: string;
     courseThemes: string[];
-    reservationLink?:string;
     biography?:string;
+    reservationLink?:string;
 }
