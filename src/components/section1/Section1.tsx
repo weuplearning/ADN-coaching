@@ -11,9 +11,11 @@ import { Professor } from '../../interfaces/interface'
 
 interface Section1Props {
     professors: Professor[]
+    selectedCategoryFromSection1: string
+    onCategoryChangeFromSection1: (category: string) => void
 }
 
-const Section1: React.FC<Section1Props> = ({ professors }) => {
+const Section1: React.FC<Section1Props> = ({ professors, onCategoryChangeFromSection1 }) => {
 
     // defining the path for images
     // const categoryImagePath = 'https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets'
@@ -75,6 +77,7 @@ const Section1: React.FC<Section1Props> = ({ professors }) => {
                                 countOfProfessorsInCategory={category.countOfProfessorsInCategory}
                                 professors={category.professorsInCategory}
                                 categoryImage={category.categoryImage}
+                                onCategoryChangeFromSection1={onCategoryChangeFromSection1}
                             />
                         </SwiperSlide>
                     ))}

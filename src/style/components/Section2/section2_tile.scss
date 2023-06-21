@@ -2,9 +2,9 @@
     display: flex;
     // flex-direction: column;
     background: $white;
-    border: .15rem solid $color4;
+    border: .2rem solid $color4;
     @include usualSpaces(2rem,3rem,3rem,3rem);
-    height: 33rem;
+    height: 36rem;
     width: 20rem;
     transition: .2s;
     box-shadow: 0rem 0rem 2rem 0rem $color5;
@@ -12,12 +12,6 @@
     z-index: 0;
     transition: ease-in-out .2s;
 }
-
-.blur-element > *:not(.section2_tile-moreInfos-popup){
-    // filter: blur(.01rem);
-    // opacity: .5;
-}
-
 
 .section2_tile-button,
 .section2_tile li {
@@ -63,7 +57,7 @@
     top: 3rem;
     right: 7rem;
     cursor: pointer;
-    transition: ease-in-out .2s;
+    transition: ease-in-out .15s;
 }
 .section2_tile-moreInfos:hover{
     content: url('#{$assetsPath}icons/info_filled.svg');
@@ -74,26 +68,36 @@
 
 .section2_tile-moreInfos-popup{
     position: absolute;
-    padding: 1rem;
+    padding: 1.5rem;
     background: white;
-    border: .2rem solid $color4;
-    box-shadow: 0rem 0rem 2rem 0rem $color5;
+    border: .18rem solid $color4;
+    box-shadow: 0rem 0rem 2rem 0rem $color4;
     border-radius: .7rem;
-    width: 18rem;
+    width: 20rem;
     // max-width: 90%;
     // max-height: 100%;
     z-index: 1;
     bottom: -23rem;
-    left: -.2rem;
+    left: -1.75rem;
     transition: .2;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.9rem;
 }
-.section2_tile-moreInfos-popup:hover{
-    transform: scale(0.99);
-    transition: .2s;
+// .section2_tile-moreInfos-popup:hover{
+//     transform: scale(0.99);
+//     transition: .2s;
+// }
+
+.closePopupButton{
+    align-self: flex-end;
+    content: url('#{$assetsPath}icons/cross.svg');
+    transition: .15s;
+    width: 1rem;
+    margin-bottom: .5rem;
 }
-:not(.section2_tile-moreInfos-popup):hover{
-    // transition: .2s;
-    // transform: scale(1.1);
+.closePopupButton:hover{
+    transform: rotate(45deg);
 }
 
 .section2_tile-category{
@@ -114,8 +118,26 @@
     color: $color3;
 }
 
+.section2_tile-themList{
+    background: $color7;
+    border-radius: .5rem;
+    // overflow-y: auto;
+    font-size: 1.1rem;
+    // height: 12rem;
+}
+
 .spacer{
     flex-grow: 1;
+}
+
+.section2_tile-buttonShowMore{
+    @include buttonType1($color5);
+    align-self: flex-end;
+    padding: .4rem;
+    border-radius: .4rem;
+    margin-top: -2.3rem;
+    font-size: .9rem;
+    margin-right: 2rem;
 }
 
 .section2_tile-button{

@@ -5,7 +5,6 @@ export interface Professor {
     title: string;
     category: string;
     department: string;
-    email: string;
     imagePath: string;
     courseThemes: string[];
     biography?:string;

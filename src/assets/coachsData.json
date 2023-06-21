@@ -2,19 +2,24 @@
     "professors": [
         {
             "id": 1,
-            "firstName": "John",
-            "lastName": "Doe",
+            "firstName": "Delphine",
+            "lastName": "Sandrin",
             "title": "Professor",
             "category":"Stratégie",
             "department": "Computer Science",
-            "email": "johndoe@example.com",
             "imagePath": "src/assets/images/prof1.svg",
             "courseThemes": [
-                "Algorithms",
-                "Data Structures",
-                "Artificial Intelligence"
+                "la difficulté à prioriser de façon optimale",
+                "la difficulté à avoir une planification efficace",
+                "le manque de clarté",
+                "la difficulté à avoir une todo list efficace",
+                "la procrastination",
+                "le manque de focus",
+                "la difficulté à déléguer",
+                "la charge mentale",
+                "la difficulté à dire non"
             ],
-            "biography": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "biography": "À l'origine, Delphine SANDRIN est ingénieure en agro-alimentaire. Elle a occupé pendant plusieurs années divers postes à responsabilité dans le domaine des études de marché, de la communication et des médias. Aujourd'hui, elle est coach certifiée, consultante et formatrice en gestion du temps. Elle accompagne les entrepreneurs débordés et stressés à gagner en efficacité et en sérénité. Sa philosophie est de faire moins mais mieux.",
             "reservationLink":"https://www.google.fr/"
         },
         {
@@ -24,12 +29,12 @@
             "title": "Associate Professor",
             "category":"Marketing",
             "department": "Mathematics",
-            "email": "janesmith@example.com",
             "imagePath": "src/assets/images/prof2.svg",
             "courseThemes": [
                 "Calculus",
                 "Linear Algebra",
-                "Statistics"
+                "Statistics",
+                "blublublu"
             ],
             "biography": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             "reservationLink":"https://www.google.fr/"
@@ -41,7 +46,6 @@
             "title": "Assistant Professor",
             "category":"Ventes",
             "department": "Physics",
-            "email": "bobjohnson@example.com",
             "imagePath": "src/assets/images/prof3.svg",
             "courseThemes": [
                 "Classical Mechanics",
@@ -58,7 +62,6 @@
             "title": "nia nia",
             "category":"Gestion d'entreprise",
             "department": "Physics",
-            "email": "test@example.com",
             "imagePath": "src/assets/images/prof4.svg",
             "courseThemes": [
                 "ichi ni",
@@ -76,7 +79,6 @@
             "title": "Assistant Professor",
             "category": "Gestion des opérations",
             "department": "Computer Engineering",
-            "email": "davidlee@example.com",
             "imagePath": "src/assets/images/prof5.svg",
             "courseThemes": [
                 "Computer Networks",
@@ -93,7 +95,6 @@
             "title": "Associate Professor",
             "category": "Tech",
             "department": "Psychology",
-            "email": "emilywong@example.com",
             "imagePath": "src/assets/images/prof6.svg",
             "courseThemes": [
                 "Developmental Psychology",
@@ -110,7 +111,6 @@
             "title": "Lecturer",
             "category": "Tech",
             "department": "Information Systems",
-            "email": "michaelnguyen@example.com",
             "imagePath": "src/assets/images/prof7.svg",
             "courseThemes": [
                 "Database Systems",
@@ -127,7 +127,6 @@
             "title": "test1",
             "category": "Marketplace",
             "department": "Information Systems",
-            "email": "michaelnguyen@example.com",
             "imagePath": "src/assets/images/prof8.svg",
             "courseThemes": [
                 "Database Systems",
@@ -144,7 +143,6 @@
             "title": "test1",
             "category": "Tech",
             "department": "Information Systems",
-            "email": "michaelnguyen@example.com",
             "imagePath": "src/assets/images/prof8.svg",
             "courseThemes": [
                 "Database Systems",
@@ -161,7 +159,6 @@
             "title": "test1",
             "category": "Tech",
             "department": "Information Systems",
-            "email": "michaelnguyen@example.com",
             "imagePath": "src/assets/images/prof2.svg",
             "courseThemes": [
                 "Database Systems",

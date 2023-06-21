@@ -9,6 +9,7 @@
     transition: .2s;
     border: .3rem solid darken($color3, 7%);
     border-radius: 1rem;
+    cursor: pointer;
 }
 .section1_tile:hover{
     transform: scale(0.985);

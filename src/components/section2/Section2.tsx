@@ -1,33 +1,33 @@
-import React, { useState } from 'react'
-import { Professor } from '../../interfaces/interface';
+import React, { useState, useEffect } from 'react'
+import { Professor } from '../../interfaces/interface'
 import Section2_tile from './Section2_tile'
 
 interface Section2Props {
     professors: Professor[]
+    selectedCategoryFromSection1: string
 }
 
-const Section2: React.FC<Section2Props> = ({ professors }) => {
+const Section2: React.FC<Section2Props> = ({ professors, selectedCategoryFromSection1 }) => {
+    const [selectedCategories, setSelectedCategories] = useState<string[]>([])
 
-    // variable containing state of selected categories in the filter menu
-    const [selectedCategories, setselectedCategories] = useState<string[]>([])
-    
-    // variable containing state of filter menu, if it's opened or not
+    useEffect(() => {
+        if (selectedCategories.length === 0) {
+            setSelectedCategories(selectedCategoryFromSection1 ? [selectedCategoryFromSection1] : [])
+        }
+    }, [selectedCategoryFromSection1])
+
     const [menuOpen, setMenuOpen] = useState(false)
 
-    // function to filter categories/themes
     const handleCategoryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-
-        const category = (event.target.value)
+        const category = event.target.value
 
         if (event.target.checked) {
-            setselectedCategories(prevSelectedCategories => [...prevSelectedCategories, category])
-        }
-        else {
-            setselectedCategories(prevSelectedCategories => prevSelectedCategories.filter(element => element !== category))
+            setSelectedCategories(prevSelectedCategories => [...prevSelectedCategories, category])
+        } else {
+            setSelectedCategories(prevSelectedCategories => prevSelectedCategories.filter(element => element !== category))
         }
     }
 
-    // function to hide/show the filters in the filter menu
     const handleButtonClick = () => {
         setMenuOpen(!menuOpen)
     }
@@ -43,7 +43,7 @@ const Section2: React.FC<Section2Props> = ({ professors }) => {
                             // Add checkboxes for each course category found in json
                             [...new Set(professors.map(professor => professor.category))].map(category => (
                                 <label key={category}>
-                                    <input type="checkbox" value={category} onChange={handleCategoryChange} />
+                                    <input type="checkbox" value={category} onChange={handleCategoryChange} checked={selectedCategories.includes(category)} />
                                     {category}
                                 </label>
                             ))
