@@ -1,5 +1,5 @@
 import React from 'react'
-import { Professor } from '../../interfaces/interface';
+import { Professor } from '../../interfaces/interface'
 
 interface Section1_tileProps{
     categoryName: string
@@ -7,11 +7,15 @@ interface Section1_tileProps{
     professors: Professor[]
     categoryImage:string
     onCategoryChangeFromSection1: (category: string) => void
+    onScrollToSection2: () => void
 }
 
-const Section1_tile: React.FC<Section1_tileProps> = ({ categoryName, countOfProfessorsInCategory, professors, categoryImage, onCategoryChangeFromSection1 }) => {
+const Section1_tile: React.FC<Section1_tileProps> = ({ categoryName, countOfProfessorsInCategory, professors, categoryImage, onCategoryChangeFromSection1, onScrollToSection2 }) => {
 
-    const handleClick = () => onCategoryChangeFromSection1(categoryName)
+    const handleClick = () => {
+        onCategoryChangeFromSection1(categoryName)
+        onScrollToSection2()
+    }
 
     return (
         <div className='section1_tile' onClick={ handleClick }>

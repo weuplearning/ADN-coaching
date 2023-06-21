@@ -11,9 +11,7 @@ const Section2: React.FC<Section2Props> = ({ professors, selectedCategoryFromSec
     const [selectedCategories, setSelectedCategories] = useState<string[]>([])
 
     useEffect(() => {
-        if (selectedCategories.length === 0) {
-            setSelectedCategories(selectedCategoryFromSection1 ? [selectedCategoryFromSection1] : [])
-        }
+        setSelectedCategories(selectedCategoryFromSection1 ? [selectedCategoryFromSection1] : [])
     }, [selectedCategoryFromSection1])
 
     const [menuOpen, setMenuOpen] = useState(false)
@@ -34,6 +32,7 @@ const Section2: React.FC<Section2Props> = ({ professors, selectedCategoryFromSec
 
     return (
         <div className='section2'>
+            <div ref={section2Ref}><Section2 professors={professors} selectedCategoryFromSection1={selectedCategoryFromSection1} /></div>
             <div className="section2-top">
                 <h2>Tous nos formateurs</h2>
                 <div className="section2-filter">

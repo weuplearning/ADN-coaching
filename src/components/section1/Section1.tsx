@@ -13,9 +13,10 @@ interface Section1Props {
     professors: Professor[]
     selectedCategoryFromSection1: string
     onCategoryChangeFromSection1: (category: string) => void
+    onScrollToSection2: () => void
 }
 
-const Section1: React.FC<Section1Props> = ({ professors, onCategoryChangeFromSection1 }) => {
+const Section1: React.FC<Section1Props> = ({ professors, onCategoryChangeFromSection1, onScrollToSection2 }) => {
 
     // defining the path for images
     // const categoryImagePath = 'https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets'
@@ -78,6 +79,7 @@ const Section1: React.FC<Section1Props> = ({ professors, onCategoryChangeFromSec
                                 professors={category.professorsInCategory}
                                 categoryImage={category.categoryImage}
                                 onCategoryChangeFromSection1={onCategoryChangeFromSection1}
+                                onScrollToSection2={onScrollToSection2}
                             />
                         </SwiperSlide>
                     ))}
