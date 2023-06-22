@@ -12,6 +12,12 @@ To build the project
 vite build
 ```
 
+ou
+
+```sh
+npm run build
+```
+
 ---
 
 **To change the paths of assets if needed :**
