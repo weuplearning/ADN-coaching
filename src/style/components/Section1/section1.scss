@@ -15,12 +15,14 @@
     content: url("#{$assetsPath}icons/carouselArrow_next.svg");
     transition: .2s;
     transform: translateX(-.5rem);
+    padding: .4rem;
 }
 .swiper-button-prev{
     // background-image: url('https://example.com/prev-arrow.png');
     content: url("#{$assetsPath}icons/carouselArrow_prev.svg");
     transition: .2s;
     transform: translateX(.5rem);
+    padding: .4rem;
 }
 .swiper-button-next:hover{
     transform: translateX(-.5rem) scale(1.2);

@@ -95,6 +95,7 @@
     transition: .15s;
     width: 1rem;
     margin-bottom: .5rem;
+    cursor: pointer;
 }
 .closePopupButton:hover{
     transform: rotate(45deg);
@@ -122,7 +123,7 @@
     background: $color7;
     border-radius: .5rem;
     // overflow-y: auto;
-    font-size: 1.1rem;
+    font-size: 1rem;
     // height: 12rem;
 }
 
