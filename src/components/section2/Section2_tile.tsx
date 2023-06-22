@@ -30,8 +30,10 @@ const Section2_tile: React.FC<Section2_tileProps> = ({ professor }) => {
                     <p className='section2_tile-category'>{professor.category}</p>
                 </div>
                 <div className="section2_tile-middleSection">
-                    <img className='section2_tile-img' src={professor.imagePath} alt={professor.firstName + ' ' + professor.lastName} />
-                    <div className="section2_tile-moreInfos" onClick={() => setShowPopup(!showPopup)}></div>
+                    <div className="section2_tile-photoAndInfoSection">
+                        <img className='section2_tile-img' src={professor.imagePath} alt={professor.firstName + ' ' + professor.lastName} />
+                        <div className="section2_tile-moreInfos" onClick={() => setShowPopup(!showPopup)}></div>
+                    </div>
                     {showPopup && (
                         <div ref={popupRef} className="section2_tile-moreInfos-popup">
                             <div className="closePopupButton" onClick={() => setShowPopup(false)}>A</div>

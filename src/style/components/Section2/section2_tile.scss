@@ -30,9 +30,10 @@
 .section2_tile-middleSection{
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 3rem;
-
+    margin-top: 1rem;
     position: relative;
+    place-content: space-between;
+    min-height: 10rem;
 }
 .section2_tile-middleSection-text{
     display: flex;
@@ -42,22 +43,26 @@
 
 .section2_tile-img{
     width: 6.5rem;
-    position: absolute;
-    top: -3rem;
+    margin-top: -1rem;
+    margin-right: -1rem;
+    // position: absolute;
+    // top: -3rem;
     border-radius: 5rem;
 }
 
 .section2_tile-moreInfos{
     content: url('#{$assetsPath}icons/info_empty.svg');
     // border: .1rem solid $color1;
-    position: absolute;
-    padding: .2rem;
-    border-radius: 2rem;
-    font-size: .7rem;
-    top: 3rem;
-    right: 7rem;
+    // position: absolute;
+    padding: .5rem;
+    // border-radius: 2rem;
+    // font-size: .7rem;
+    // top: 3rem;
+    // right: 7rem;
     cursor: pointer;
-    transition: ease-in-out .15s;
+    transition: ease-in-out .1s;
+    width: 1.4rem;
+    margin-left: -1.5rem;
 }
 .section2_tile-moreInfos:hover{
     content: url('#{$assetsPath}icons/info_filled.svg');
@@ -68,7 +73,7 @@
 
 .section2_tile-moreInfos-popup{
     position: absolute;
-    padding: 1.5rem;
+    padding: 1.2rem;
     background: white;
     border: .18rem solid $color4;
     box-shadow: 0rem 0rem 2rem 0rem $color4;
@@ -92,10 +97,11 @@
 .closePopupButton{
     align-self: flex-end;
     content: url('#{$assetsPath}icons/cross.svg');
-    transition: .15s;
+    transition: ease-in-out .15s;
     width: 1rem;
-    margin-bottom: .5rem;
+    // margin-bottom: .5rem;
     cursor: pointer;
+    padding: .2rem;
 }
 .closePopupButton:hover{
     transform: rotate(45deg);

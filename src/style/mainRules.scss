@@ -8,6 +8,9 @@ $color5 : #dadada;
 $color6: #262626;
 $color7 : #ececec;
 $color8 : #da823a;
+$color9 : #a0a0a0;
+$color10 : #44a1b9;
+$color11 : #c6c6c6;
 
 // -------- main fonts
 @import url('https://fonts.cdnfonts.com/css/amazon-ember');
@@ -44,7 +47,7 @@ $assetsPath : 'https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach
 
 // -------- main rules
 * {
-    transition: .15s;
+    transition: .05s;
 }
 
 body {

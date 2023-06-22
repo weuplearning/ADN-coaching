@@ -13,24 +13,28 @@
     .section2_tile{
         margin: 2rem 1rem;
     }
-}
-@media screen and (max-width:1550px) {
-    .section2{
-        padding: 2rem 2rem;
-    }
-    .section2_tile{
-        margin: 2rem 1rem;
-    }
-}
-@media screen and (max-width:950px) {
-    .section2-top{
-        flex-direction: column;
-    }
-}
-@media screen and (max-width:1700px) {
     .section1_tile-topSection{
         min-height: 10rem;
         background-position: unset;
+    }
+}
+@media screen and (max-width:1550px) {
+    .section2{
+        padding: 2rem 1rem;
+    }
+    .section2_tile{
+        margin: 2rem .5rem;
+    }
+    .section2_tile{
+        padding: 3rem 2rem;
+    }
+    .section2_tile-category{
+        margin: -3rem -2rem;
+    }
+}
+@media screen and (max-width:1450px) {
+    .section2-filterItems{
+        max-width: 30rem;
     }
 }
 @media screen and (max-width:1400px) {
@@ -44,37 +48,49 @@
         min-height: 10rem;
         background-position: unset;
     }
+    .section2-filter{
+        flex-direction: column;
+    }
+    .section2-filterButton{
+        align-self: flex-end;
+    }
+    .section2-filterItems{
+        margin-top: 1rem;
+    }
+    .section2-top{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:950px) {
+    .section2_tile{
+        padding: 3rem 1rem;
+    }
+    .section2_tile-category{
+        margin: -3rem -1rem;
+    }
 }
 @media screen and (max-width:900px) {
     .section1_tile-topSection{
         min-height: 7rem;
         background-position: unset;
     }
-    .section2-filter{
-        flex-direction: column;
-        margin-bottom: 3rem;
+    .section2-filterItems{
+        margin-top: 1.5rem;
+        // flex-direction: column;
     }
-    .section2-filterButton{
-        margin-bottom: 1.5rem;
-        align-self: flex-end;
+    .section2-filter{
+        // flex-direction: column;
+        // align-self: center;
+        margin-bottom: 2rem;
+    }
+    .section2-filterItems > label{
+        margin: .5rem .5rem;
     }
 }
 @media screen and (max-width:749px) {
     .section1_tile-topSection{
         min-height: 17rem;
         background-position: unset;
-    }
-    .section2-filterItems{
-        margin-top: 1.5rem;
-        flex-direction: column;
-    }
-    .section2-filter{
-        flex-direction: column;
-        align-self: center;
-        margin-bottom: 2rem;
-    }
-    .section2-filterItems > label{
-        margin: .5rem .5rem;
     }
 }
 @media screen and (max-width:600px) {
@@ -87,8 +103,11 @@
         min-height: 6rem;
         background-position: unset;
     }
+    .section2_tile{
+        box-shadow: unset;
+    }
 }
-@media screen and (max-width:400px) {
+@media screen and (max-width:420px) {
     body{
         font-size: 1.1rem;
     }
@@ -113,6 +132,7 @@
     }
     .section1_tile-bottomSection{
         padding: 0;
+        padding-left: .5rem;
     }
     .section1_tile-professorPhotos > li > img{
         width: 3rem !important;
@@ -138,5 +158,28 @@
     .section2_tile{
         margin: 1.5rem 0;
         padding: 3rem 1rem;
+    }
+    .swiper-button-next,.swiper-button-prev{
+        display: none;
+    }
+    .section2_tile-button{
+        padding: 0.6rem .7rem;
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:350px) {
+    .section2{
+        margin: 1rem .5rem;
+        padding: 2rem 1rem;
+    }
+    .section2_tile{
+        transform: scale(.9);
+    }
+    .section2_tile-moreInfos-popup{
+        transform: scale(.8);
+        box-shadow: unset;
+        top: 50%;
+        left: -21%;
+        transform: translate(-50%, -50%);
     }
 }

@@ -40,7 +40,7 @@ const Section2: React.FC<Section2Props> = ({ professors, selectedCategoryFromSec
                         {menuOpen &&
                             // Add checkboxes for each course category found in json
                             [...new Set(professors.map(professor => professor.category))].map(category => (
-                                <label key={category}>
+                                <label key={category} className={`section2-filterSection-labels ${selectedCategories.includes(category) ? 'section2-filterSection-labels-checked' : ''}`}>
                                     <input type="checkbox" value={category} onChange={handleCategoryChange} checked={selectedCategories.includes(category)} />
                                     {category}
                                 </label>

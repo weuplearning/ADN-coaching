@@ -33,10 +33,6 @@
     transition: .15s;
     font-size: 1rem;
 }
-.section2-filterItems > label{
-    margin: 0 .5rem;
-    // display: none;
-}
 
 .section2-filterButton{
     border: .2rem solid darken($color4, 25%);
@@ -70,12 +66,50 @@
     // transition: .1s;
     // opacity: 0;
     // transition: opacity .3s ease-in-out;
+    flex-wrap: wrap;
 }
 .section2-filterItems-open{
     display: flex;
     // filter: blur(0rem) opacity(1);
     // opacity: 1;
     background: $color4;
+}
+
+.section2-filterSection-labels{
+    background: $color7;
+    padding: .2rem .7rem;
+    border-radius: .3rem;
+    border: unset;
+    cursor: pointer;
+    transition: .1s;
+    // white-space: nowrap;
+    margin: .4rem;
+}
+.section2-filterSection-labels:hover{
+    filter: brightness(.95);
+}
+.section2-filterSection-labels:active{
+    transform: scale(.95);
+}
+.section2-filterSection-labels-checked{
+    background: $color10;
+    color: white;
+}
+
+.section2-filterSection-labels > input[type=checkbox]{
+    display: none;
+    transition: ease-in-out .15s;
+}
+.section2-filterSection-labels > input[type=checkbox]:active{
+    transform: scale(.7);
+}
+
+.section2_tile-photoAndInfoSection{
+    margin: 2rem;
+}
+
+h3.section2_tile-name{
+    max-width: 9rem;
 }
 
 .professorList{
