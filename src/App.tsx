@@ -11,8 +11,8 @@ const App = () => {
 
     // dev version is using local assets, prod is using the url link
     useEffect(() => {
-        // fetch('https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets/coachsData.json')
-        fetch('src/assets/coachsData.json')
+        fetch('https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets/coachsData.json')
+        // fetch('src/assets/coachsData.json')
             .then(response => response.json())
             .then(datas => setProfessors(datas.professors))
     }, [])
