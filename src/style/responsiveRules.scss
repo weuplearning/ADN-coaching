@@ -56,10 +56,12 @@
     }
     .section2-filterItems{
         margin-top: 1rem;
+        margin-right: 0;
     }
     .section2-top{
         flex-direction: column;
     }
+
 }
 @media screen and (max-width:950px) {
     .section2_tile{
