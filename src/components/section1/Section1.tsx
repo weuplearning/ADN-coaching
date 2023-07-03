@@ -20,7 +20,7 @@ const Section1: React.FC<Section1Props> = ({ professors, onCategoryChangeFromSec
 
     // defining the path for images
     // const categoryImagePath = 'https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets'
-    const categoryImagePath = 'https://amazon.koa.qualif.dev/media/microsites/amazon/react_coach/assets'
+    const categoryImagePath = `${window.location.origin}/media/microsites/amazon/react_coach/assets`
 
     // object that define all the categories/themes that will be used to name the tiles in the carousel and such
     const categories = [
