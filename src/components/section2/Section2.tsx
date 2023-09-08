@@ -14,7 +14,7 @@ const Section2: React.FC<Section2Props> = ({ professors, selectedCategoryFromSec
         setSelectedCategories(selectedCategoryFromSection1 ? [selectedCategoryFromSection1] : [])
     }, [selectedCategoryFromSection1])
 
-    const [menuOpen, setMenuOpen] = useState(false)
+    // const [menuOpen, setMenuOpen] = useState(false)
 
     const handleCategoryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const category = event.target.value
@@ -26,23 +26,24 @@ const Section2: React.FC<Section2Props> = ({ professors, selectedCategoryFromSec
         }
     }
 
-    const handleButtonClick = () => {
-        setMenuOpen(!menuOpen)
-    }
+    // const handleButtonClick = () => {
+    //     setMenuOpen(!menuOpen)
+    // }
 
     return (
         <div className='section2'>
             <div className="section2-top">
                 <h2>Tous nos formateurs</h2>
                 <div className="section2-filter">
-                    <div onClick={handleButtonClick} className='section2-filterButton'>filtres</div>
-                    <div className={`section2-filterItems ${menuOpen ? 'section2-filterItems-open' : ''}`}>
-                        {menuOpen &&
+                    {/* <div onClick={handleButtonClick} className='section2-filterButton'>filtres</div> */}
+                    {/* <div className={`section2-filterItems ${menuOpen ? 'section2-filterItems-open' : ''}`}> */}
+                    <div className='section2-filterItems section2-filterItems-open'>
+                        {professors &&
                             // Add checkboxes for each course category found in json
                             [...new Set(professors.map(professor => professor.category))].map(category => (
                                 <label key={category} className={`section2-filterSection-labels ${selectedCategories.includes(category) ? 'section2-filterSection-labels-checked' : ''}`}>
                                     <input type="checkbox" value={category} onChange={handleCategoryChange} checked={selectedCategories.includes(category)} />
-                                    {category}
+                                    {'#'+category}
                                 </label>
                             ))
                         }

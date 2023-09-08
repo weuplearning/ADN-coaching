@@ -45,7 +45,7 @@ const Section2_tile: React.FC<Section2_tileProps> = ({ professor }) => {
                         <p className='section2_tile-jobTitle'>{professor.title}</p>
                     </div>
                 </div>
-                <p className='section2_tile-themes'>Thematiques abordées :</p>
+                <p className='section2_tile-themes'>Thématiques abordées :</p>
                 <ul className='section2_tile-themList'>
                     {(showAllThemes ? professor.courseThemes : professor.courseThemes.slice(0, 4)).map(theme => (
                         <li key={theme}>{theme}</li>
@@ -53,7 +53,7 @@ const Section2_tile: React.FC<Section2_tileProps> = ({ professor }) => {
                 </ul>
                 {professor.courseThemes.length > 4 && <div className="section2_tile-buttonShowMore" onClick={() => setShowAllThemes(!showAllThemes)}>Voir plus</div>}
                 <div className="spacer"></div>
-                <a className='section2_tile-button' target='_blank' href={professor.reservationLink}>reserver un coaching</a>
+                <a className='section2_tile-button' target='_blank' href={professor.reservationLink}>Réserver un coaching</a>
             </div>
         </div>
     )
